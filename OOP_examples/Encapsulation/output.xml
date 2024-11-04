@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.12.7 on win32)" generated="2024-11-01T12:01:47.007953" rpa="false" schemaversion="5">
+<suite id="s1" name="Test Bank Account" source="C:\Users\rocke\IdeaProjects\PyLeet\OOP_examples\Encapsulation\tests\test_bank_account.robot">
+<test id="s1-t1" name="Test Initial Balance" line="9">
+<kw name="Create Bank Account" owner="BankAccountLibrary">
+<arg>${ACCOUNT_NUMBER}</arg>
+<arg>${INITIAL_BALANCE}</arg>
+<doc>Creates a bank account with a given account number and initial balance.</doc>
+<status status="PASS" start="2024-11-01T12:01:47.038125" elapsed="0.000000"/>
+</kw>
+<kw name="Get Balance" owner="BankAccountLibrary">
+<msg time="2024-11-01T12:01:47.038125" level="INFO">${balance} = 1000.0</msg>
+<var>${balance}</var>
+<doc>Returns the current balance of the account.</doc>
+<status status="PASS" start="2024-11-01T12:01:47.038125" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<msg time="2024-11-01T12:01:47.038125" level="INFO">Argument types are:
+&lt;class 'float'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${balance}</arg>
+<arg>${INITIAL_BALANCE}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-11-01T12:01:47.038125" elapsed="0.000000"/>
+</kw>
+<doc>Verify the initial balance is correctly set</doc>
+<status status="PASS" start="2024-11-01T12:01:47.038125" elapsed="0.000000"/>
+</test>
+<test id="s1-t2" name="Test Deposit Positive Amount" line="15">
+<kw name="Create Bank Account" owner="BankAccountLibrary">
+<arg>${ACCOUNT_NUMBER}</arg>
+<arg>${INITIAL_BALANCE}</arg>
+<doc>Creates a bank account with a given account number and initial balance.</doc>
+<status status="PASS" start="2024-11-01T12:01:47.040058" elapsed="0.000000"/>
+</kw>
+<kw name="Deposit Amount" owner="BankAccountLibrary">
+<msg time="2024-11-01T12:01:47.041380" level="FAIL">TypeError: '&gt;' not supported between instances of 'str' and 'int'</msg>
+<arg>500</arg>
+<doc>Deposits a given amount into the account.</doc>
+<status status="FAIL" start="2024-11-01T12:01:47.040058" elapsed="0.001831">TypeError: '&gt;' not supported between instances of 'str' and 'int'</status>
+</kw>
+<kw name="Get Balance" owner="BankAccountLibrary">
+<var>${balance}</var>
+<doc>Returns the current balance of the account.</doc>
+<status status="NOT RUN" start="2024-11-01T12:01:47.042998" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${balance}</arg>
+<arg>1500.0</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="NOT RUN" start="2024-11-01T12:01:47.042998" elapsed="0.000000"/>
+</kw>
+<doc>Verify deposit increases balance correctly</doc>
+<status status="FAIL" start="2024-11-01T12:01:47.040058" elapsed="0.002940">TypeError: '&gt;' not supported between instances of 'str' and 'int'</status>
+</test>
+<test id="s1-t3" name="Test Deposit Negative Amount" line="22">
+<kw name="Create Bank Account" owner="BankAccountLibrary">
+<arg>${ACCOUNT_NUMBER}</arg>
+<arg>${INITIAL_BALANCE}</arg>
+<doc>Creates a bank account with a given account number and initial balance.</doc>
+<status status="PASS" start="2024-11-01T12:01:47.042998" elapsed="0.000000"/>
+</kw>
+<kw name="Deposit Amount" owner="BankAccountLibrary">
+<msg time="2024-11-01T12:01:47.042998" level="FAIL">TypeError: '&gt;' not supported between instances of 'str' and 'int'</msg>
+<arg>-100</arg>
+<doc>Deposits a given amount into the account.</doc>
+<status status="FAIL" start="2024-11-01T12:01:47.042998" elapsed="0.000000">TypeError: '&gt;' not supported between instances of 'str' and 'int'</status>
+</kw>
+<kw name="Get Balance" owner="BankAccountLibrary">
+<var>${balance}</var>
+<doc>Returns the current balance of the account.</doc>
+<status status="NOT RUN" start="2024-11-01T12:01:47.042998" elapsed="0.002460"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${balance}</arg>
+<arg>${INITIAL_BALANCE}</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="NOT RUN" start="2024-11-01T12:01:47.045458" elapsed="0.000000"/>
+</kw>
+<doc>Verify deposit does not change balance for negative amount</doc>
+<status status="FAIL" start="2024-11-01T12:01:47.042998" elapsed="0.002460">TypeError: '&gt;' not supported between instances of 'str' and 'int'</status>
+</test>
+<test id="s1-t4" name="Test Withdraw Valid Amount" line="29">
+<kw name="Create Bank Account" owner="BankAccountLibrary">
+<arg>${ACCOUNT_NUMBER}</arg>
+<arg>${INITIAL_BALANCE}</arg>
+<doc>Creates a bank account with a given account number and initial balance.</doc>
+<status status="PASS" start="2024-11-01T12:01:47.045458" elapsed="0.000000"/>
+</kw>
+<kw name="Withdraw Amount" owner="BankAccountLibrary">
+<msg time="2024-11-01T12:01:47.045458" level="FAIL">TypeError: '&gt;' not supported between instances of 'str' and 'int'</msg>
+<arg>200</arg>
+<doc>Withdraws a given amount from the account.</doc>
+<status status="FAIL" start="2024-11-01T12:01:47.045458" elapsed="0.000000">TypeError: '&gt;' not supported between instances of 'str' and 'int'</status>
+</kw>
+<kw name="Get Balance" owner="BankAccountLibrary">
+<var>${balance}</var>
+<doc>Returns the current balance of the account.</doc>
+<status status="NOT RUN" start="2024-11-01T12:01:47.046932" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${balance}</arg>
+<arg>800.0</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="NOT RUN" start="2024-11-01T12:01:47.046932" elapsed="0.000000"/>
+</kw>
+<doc>Verify withdraw decreases balance correctly</doc>
+<status status="FAIL" start="2024-11-01T12:01:47.045458" elapsed="0.001474">TypeError: '&gt;' not supported between instances of 'str' and 'int'</status>
+</test>
+<test id="s1-t5" name="Test Withdraw Insufficient Funds" line="36">
+<kw name="Create Bank Account" owner="BankAccountLibrary">
+<arg>${ACCOUNT_NUMBER}</arg>
+<arg>100.0</arg>
+<doc>Creates a bank account with a given account number and initial balance.</doc>
+<status status="PASS" start="2024-11-01T12:01:47.046932" elapsed="0.001389"/>
+</kw>
+<kw name="Withdraw Amount" owner="BankAccountLibrary">
+<msg time="2024-11-01T12:01:47.048321" level="FAIL">TypeError: '&gt;' not supported between instances of 'str' and 'int'</msg>
+<arg>200</arg>
+<doc>Withdraws a given amount from the account.</doc>
+<status status="FAIL" start="2024-11-01T12:01:47.048321" elapsed="0.000000">TypeError: '&gt;' not supported between instances of 'str' and 'int'</status>
+</kw>
+<kw name="Get Balance" owner="BankAccountLibrary">
+<var>${balance}</var>
+<doc>Returns the current balance of the account.</doc>
+<status status="NOT RUN" start="2024-11-01T12:01:47.048321" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<arg>${balance}</arg>
+<arg>100.0</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="NOT RUN" start="2024-11-01T12:01:47.048321" elapsed="0.000000"/>
+</kw>
+<doc>Verify balance remains unchanged when withdrawing more than balance</doc>
+<status status="FAIL" start="2024-11-01T12:01:47.046932" elapsed="0.001389">TypeError: '&gt;' not supported between instances of 'str' and 'int'</status>
+</test>
+<test id="s1-t6" name="Test Get Account Number" line="43">
+<kw name="Create Bank Account" owner="BankAccountLibrary">
+<arg>${ACCOUNT_NUMBER}</arg>
+<arg>${INITIAL_BALANCE}</arg>
+<doc>Creates a bank account with a given account number and initial balance.</doc>
+<status status="PASS" start="2024-11-01T12:01:47.049599" elapsed="0.000000"/>
+</kw>
+<kw name="Get Account Number" owner="BankAccountLibrary">
+<msg time="2024-11-01T12:01:47.049599" level="INFO">${account_number} = 123456789</msg>
+<var>${account_number}</var>
+<doc>Returns the account number of the account.</doc>
+<status status="PASS" start="2024-11-01T12:01:47.049599" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${account_number}</arg>
+<arg>${ACCOUNT_NUMBER}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-11-01T12:01:47.050623" elapsed="0.000000"/>
+</kw>
+<doc>Verify account number is returned correctly</doc>
+<status status="PASS" start="2024-11-01T12:01:47.049599" elapsed="0.001534"/>
+</test>
+<status status="FAIL" start="2024-11-01T12:01:47.007953" elapsed="0.043180"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="4" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="4" skip="0" id="s1" name="Test Bank Account">Test Bank Account</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
